@@ -1,4 +1,4 @@
- Project Initialization (Day 1)
+Part 1- Project Initialization (Day 1)
 
 Today I started working on the Restaurant Shopping Cart System. The goal is to build a console-based program in C# that allows users to select menu items, input quantities, and simulate a simple checkout process.
 
