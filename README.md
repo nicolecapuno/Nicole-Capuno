@@ -1,80 +1,49 @@
-Restaurant Shopping Cart System – Development Progress Logs
-Part 1 – Project Initialization (Day 1)
+Features
+Product Management
+View product list with name, price, stock, and category
 
-Today I started working on the Restaurant Shopping Cart System. The goal is to build a console-based program in C# that allows users to select menu items, input quantities, and simulate a simple checkout process.
+Product Search
+Search products by name (case-insensitive)
 
-I began by planning the structure of the program. I decided to create a Product class that will represent each menu item. This class includes properties such as Id, Name, Price, and RemainingStock. These will allow me to manage each item properly, especially when tracking available stock.
+Category Filtering
+Filter products by Food, Electronics, or Clothing
 
-I also added a method called DisplayProduct() to print each item in the menu. In addition, I planned to include helper methods like GetItemTotal(), HasEnoughStock(), and DeductStock() to handle computations and stock updates.
+Cart Management
+Add items to cart
+View cart items and total
+Remove items
+Update quantity
+Clear cart
 
-At the end of today, I created an array of Product objects to serve as the restaurant menu. The program can now display the menu using a loop, which is a good starting point.
+Checkout System
+Calculates total price
+Accepts payment with validation
+Computes change
 
-Part 2 – Input Handling and Validation (Day 2)
+Receipt Generation
+Displays receipt number
+Shows date and time
+Includes total, payment, and change
 
-Today I focused on making the program interactive by allowing user input. I added prompts for selecting a product number and entering a quantity.
+Low Stock Alert
+Displays products with stock ≤ 5 after checkout
 
-To make the program more reliable, I used int.TryParse() when reading user input. This prevents the program from crashing if the user enters letters or invalid values.
+Order History
+Stores completed transactions
+Displays receipt number and total
 
-I implemented several validation checks:
+Input Validation
+Ensures valid numeric input
+Restricts Y/N inputs
+Prevents invalid entries
 
-Detecting invalid product numbers
-Rejecting negative or zero quantities
-Handling non-numeric input
-Checking if a product is out of stock
-Preventing orders that exceed the available stock
+AI was used to:
+Help identify and fix coding errors
+Improve logic for cart and stock handling
+Assist in implementing validation and receipt system
+Help organize and format the project documentation
 
-I also added clear error messages to guide the user whenever something goes wrong. This made the program easier to use and less prone to errors.
-
-At this stage, the system can properly accept and validate input, but it still does not store selected items in a cart.
-
-Part 3 – Cart System and Stock Updates (Day 3)
-
-Today I worked on implementing the cart functionality. I created a CartItem class to store the selected product, quantity, and subtotal.
-
-I used a fixed-size array to hold cart items. Then I added logic to:
-
-Add items into the cart
-Detect duplicate products and update their quantity instead of adding a new entry
-Prevent adding items when the cart is already full
-
-I also connected the cart system to stock management. When a user adds an item, the program deducts the quantity from the product’s RemainingStock. This ensures that stock levels are always updated correctly.
-
-A loop was added so the user can continue adding items until they choose to stop. This made the system feel more complete and interactive.
-
-By the end of today, the program can successfully manage multiple items, update quantities, and track remaining stock.
-
-Part 4 – Checkout, Discount, and Final Output (Day 4)
-
-Today I completed the final part of the system, which is the checkout process.
-
-I added functionality to display a receipt showing:
-
-Product names
-Quantities
-Subtotals
-
-The program now calculates the Grand Total of all items in the cart. I also implemented the discount condition: if the total reaches ₱5000 or more, a 10% discount is applied.
-
-The system then displays:
-
-Grand Total
-Discount amount (if applicable)
-Final Total after discount
-
-Lastly, I added a section that shows the updated remaining stock after checkout. This confirms that stock deductions were applied correctly.
-
-I tested different scenarios such as invalid input, insufficient stock, duplicate items, and discount application. After testing, I made small improvements to the output formatting to make it clearer and more readable.
-
-The project is now complete and meets all the given requirements.
-
-I used
-
-“Fix errors in my C# shopping cart code” – I used this prompt to help identify and correct syntax and logical errors in my program, especially issues related to loops, conditions, and array handling. 
-
-“How to validate user input using int.TryParse in C#” – This helped me understand how to properly handle non-numeric input so the program would not crash when the user enters invalid data. 
-
-“How to prevent duplicate items in a cart using arrays” – I used this to learn how to check if a product already exists in the cart and update its quantity instead of adding a new entry. 
-
-“How to manage stock in a shopping cart system” – This guided me in correctly deducting product stock after an item is added to the cart and preventing purchases beyond available stock. 
-
-“How to calculate subtotal, grand total, and discount in C#” – This helped me implement the receipt section, including applying a 10% discount when the total reaches ₱5000 or more.
+Commit History
+Add cart management system (view, remove, update, clear)
+Implement checkout with payment validation and receipt
+Add order history and low stock alert
